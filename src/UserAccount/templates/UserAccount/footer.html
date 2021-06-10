@@ -1,0 +1,48 @@
+{% block content %}
+{% load static %}
+
+<div class="row bottom-sec">
+    <footer class = "site-footer">
+        <div class="col-6">
+            <h4 class="footer-cat">About</h4>
+            <p class="text-justify">MyEmployeeManager.com is designed for non technical businesses
+                to document their employees and communicate with them in a simple manner. It is my hope
+                that the learning curve is small for all employees regardless of age and technical
+                ability.</p>
+        </div>
+        <div class="col-3">
+            <h4 class="footer-cat">Stack</h4>
+            <ul class="footer-link">
+                <li class="footer link"><a class="footer-links" href="">Django</a></li>
+                <li class="footer link"><a class="footer-links" href="">HTML/CSS</a></li>
+                <li class="footer link"><a class="footer-links" href="">MYSQL</a></li>
+                <li class="footer link"><a class="footer-links" href="">Python</a></li>
+                <li class="footer link"><a class="footer-links" href="">JavaScript</a></li>
+            </ul>
+        </div>
+        <div class="col-3">
+            <h4 class="footer-cat">Quick Links</h4>
+            <ul class="footer-link">
+                <li class="footer link"><a class="footer-links" href="">About</a></li>
+                <li class="footer link"><a class="footer-links" href="">Contact</a></li>
+                <li class="footer link"><a class="footer-links" href="">Contribute</a></li>
+                <li class="footer link"><a class="footer-links" href="">Privacy Policy</a></li>
+                <li class="footer link"><a class="footer-links" href="">Sitemap</a></li>
+            </ul>
+        </div>
+    <hr>
+    </footer>
+</div>
+
+<div class="container bottom-sec">
+    <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by
+                <a class="footer-links" href="{% url 'dashboard' %}"><u>MyEmployeeManager</u></a>
+            </p>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

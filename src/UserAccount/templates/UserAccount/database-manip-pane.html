@@ -1,0 +1,493 @@
+{% block content %}
+{% load static %}
+
+<body>
+
+
+<div class="col-6">
+
+    <div class="form-popup" id="myForm">
+        <div class=form-popup-header>
+            <h3 class="div-header-title">New Employee</h3>
+        </div>
+
+        <form action="" method="POST" class="form-container">
+            {% csrf_token %}
+            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
+            <div class="form-input">
+                <label>Employee ID:</label>
+                <input type="text" class="form-control" name="name" placeholder="">
+            </div>
+            <div>
+                <label>First name:</label>
+                <input type="text" class="form-control" name="name" placeholder="">
+                <label>Last name:</label>
+                <input type="text" class="form-control" name="name" placeholder="">
+            </div>
+            <div>
+                <label>Gender:</label>
+                <input type="text" class="form-control" name="name" placeholder="">
+            </div>
+            <div>
+                <label>Employment date:</label>
+                <input type="date" class="form-control" name="name" placeholder="">
+            </div>
+            <div>
+                <label>Working hours:</label>
+                <input type="time" class="form-control" name="name" placeholder="">
+                <span>to</span>
+                <input type="time" class="form-control" name="name" placeholder="">
+            </div>
+            <div>
+                <label>Email address:</label>
+                <input type="email" class="form-control" name="name" placeholder="">
+            </div>
+            <div>
+                <label>Primary address:</label>
+                <input type="text" class="form-control" name="name" placeholder="">
+            </div>
+            <div>
+                <div>
+                    <label>City:</label>
+                    <input type="text" class="form-control" name="name" placeholder="">
+                    <label>State:</label>
+                    <input type="text" class="form-control" name="name" placeholder="">
+                    <label>Postal code:</label>
+                    <input type="text" class="form-control" name="name" placeholder="">
+                </div>
+                <div>
+                    <label>Primary phone number:</label>
+                    <input type="text" class="form-control" name="name" placeholder="">
+                    <label>Other phone number:</label>
+                    <input type="text" class="form-control" name="name" placeholder="">
+                </div>
+                <div>
+                    <label>Date of Birth:</label>
+                    <input type="text" class="form-control" name="name" placeholder="">
+                </div>
+                <div>
+                    <label>Salary:</label>
+                    <input type="number" class="form-control" name="name" placeholder="">
+                </div>
+                <div>
+                    <label>Status:</label>
+                    <input type="text" class="form-control" name="name" placeholder="">
+                </div>
+
+               <!-- <button type="submit" value="Post" class="form-btn">Submit</button>-->
+                <input type="submit" value="Post" class="form-control"/>
+
+            </div>
+        </form>
+    </div>
+
+    <div class="form-popup" id="myForm2">
+
+        <div class=form-popup-header>
+            <h3 class="div-header-title">New office</h3>
+        </div>
+
+        <form action="" method="POST" class="form-container">
+            {% csrf_token %}
+            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
+            <div class="form-input">
+                <label>
+                    Office Address:
+                    <input type="text" class="form-control" name="office_address">
+                </label>
+            </div>
+            <div>
+                <label>
+                    City:
+                    <input type="text" class="form-control" name="city">
+                </label>
+                <label>
+                    State:
+                    <input type="text" class="form-control" name="state">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Postal Code:
+                    <input type="text" class="form-control" name="postalCode">
+                </label>
+            </div>
+                <input type="submit" value="Post" class="form-control"/>
+
+        </form>
+    </div>
+
+    <div class="form-popup" id="myForm3">
+
+        <div class=form-popup-header>
+            <h3 class="div-header-title">New position</h3>
+        </div>
+
+        <form action="" method="post" class="form-container">
+            {% csrf_token %}
+            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
+            <div class="form-input">
+                <label>Position:</label>
+                <input type="text" class="form-control" name="name" placeholder="">
+            </div>
+
+            <button type="submit" class="form-btn">Submit</button>
+
+        </form>
+    </div>
+
+    <div class="form-popup" id="myForm4">
+
+        <div class=form-popup-header>
+            <h3 class="div-header-title">New team</h3>
+        </div>
+
+        <form action="" method="post" class="form-container">
+            {% csrf_token %}
+            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
+            <div class="form-input">
+                <label>Team:</label>
+                <input type="text" class="form-control" name="name" placeholder="">
+            </div>
+            <button type="submit" class="form-btn">Submit</button>
+        </form>
+    </div>
+
+    <!--Offices,Employees,Positions,Teams-->
+    <div class="form-popup" id="myForm5">
+        <div class=form-popup-header>
+            <h3 class="div-header-title">Offices</h3>
+        </div>
+        <form action="" method="post" class="form-container">
+            {% csrf_token %}
+            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
+            <div class="form-input">
+                <label>Team:</label>
+                <input type="text" class="form-control" name="name" placeholder="">
+            </div>
+        </form>
+    </div>
+
+    <div class="form-popup" id="myForm6">
+        <div class=form-popup-header>
+            <h3 class="div-header-title">Teams</h3>
+        </div>
+        <form action="" method="post" class="form-container">
+            {% csrf_token %}
+            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
+            <div class="form-input">
+                <label>Team:</label>
+                <input type="text" class="form-control" name="name" placeholder="">
+            </div>
+        </form>
+    </div>
+
+    <div class="form-popup" id="myForm7">
+        <div class=form-popup-header>
+            <h3 class="div-header-title">Positions</h3>
+        </div>
+        <form action="" method="post" class="form-container">
+            {% csrf_token %}
+            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
+            <div class="form-input">
+                <label>Team:</label>
+                <input type="text" class="form-control" name="name" placeholder="">
+            </div>
+        </form>
+    </div>
+
+    <div class="form-popup" id="myForm8">
+        <div class=form-popup-header>
+            <h3 class="div-header-title">Employees</h3>
+        </div>
+        <form action="" method="post" class="form-container">
+            {% csrf_token %}
+            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
+            <div class="form-input">
+                <label>Team:</label>
+                <input type="text" class="form-control" name="name" placeholder="">
+            </div>
+        </form>
+    </div>
+
+    <!--Add employees to Offices,Positions,Teams forms-->
+    <div class="form-popup" id="myForm9">
+        <div class=form-popup-header>
+            <h3 class="div-header-title">Add Employee to Position</h3>
+        </div>
+        <form action="" method="post" class="form-container">
+            {% csrf_token %}
+            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
+
+            <div class="form-input">
+                <label>Employee:</label>
+                <select name="Employee" class="employee"></select>
+
+                <label>Position:</label>
+                <select name="Position" id="position"></select>
+
+                <button type="submit" class="form-btn">Add to Position</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="form-popup" id="myForm10">
+        <div class=form-popup-header>
+            <h3 class="div-header-title">Add Employee to Team</h3>
+        </div>
+        <form action="" method="post" class="form-container">
+            {% csrf_token %}
+            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
+             <div class="form-input">
+                <label>Employee:</label>
+                <select name="Employee" class="employee"></select>
+
+                <label>Team:</label>
+                <select name="Team" id="team"></select>
+
+                <button type="submit" class="form-btn">Add to Team</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="form-popup" id="myForm11">
+        <div class=form-popup-header>
+            <h3 class="div-header-title">Add Employee to Office</h3>
+        </div>
+        <form action="" method="post" class="form-container">
+            {% csrf_token %}
+            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
+             <div class="form-input">
+                <label>Employee:</label>
+                <select name="Employee" id="employee"></select>
+
+                <label>Office:</label>
+                <select name="Office" id="office"></select>
+
+                <button type="submit" class="form-btn">Add to Office</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+<script>
+    function openEmployeeForm() {
+        if (document.getElementById("myForm").style.display === "block") {
+            document.getElementById("myForm").style.display = "none";
+        } else {
+            document.getElementById("myForm").style.display = "block"
+            document.getElementById("myForm2").style.display = "none";
+            document.getElementById("myForm3").style.display = "none";
+            document.getElementById("myForm4").style.display = "none";
+            document.getElementById("myForm5").style.display = "none";
+            document.getElementById("myForm6").style.display = "none";
+            document.getElementById("myForm7").style.display = "none";
+            document.getElementById("myForm8").style.display = "none";
+        }
+    }
+
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+        document.getElementById("myForm2").style.display = "none";
+        document.getElementById("myForm3").style.display = "none";
+        document.getElementById("myForm4").style.display = "none";
+        document.getElementById("myForm5").style.display = "none";
+        document.getElementById("myForm6").style.display = "none";
+        document.getElementById("myForm7").style.display = "none";
+        document.getElementById("myForm8").style.display = "none";
+        document.getElementById("myForm9").style.display = "none";
+        document.getElementById("myForm10").style.display = "none";
+        document.getElementById("myForm11").style.display = "none";
+
+
+
+    }
+
+    /////////////////////////////////////
+    function openOfficeForm() {
+        if (document.getElementById("myForm2").style.display === "block") {
+            document.getElementById("myForm2").style.display = "none";
+        } else {
+            document.getElementById("myForm9").style.display = "none";
+            document.getElementById("myForm10").style.display = "none";
+            document.getElementById("myForm11").style.display = "none";
+            document.getElementById("myForm6").style.display = "none";
+            document.getElementById("myForm7").style.display = "none";
+            document.getElementById("myForm8").style.display = "none";
+            document.getElementById("myForm5").style.display = "none";
+            document.getElementById("myForm4").style.display = "none";
+            document.getElementById("myForm3").style.display = "none";
+            document.getElementById("myForm2").style.display = "block"
+            document.getElementById("myForm").style.display = "none"
+        }
+    }
+
+    function openPositionForm() {
+        if (document.getElementById("myForm3").style.display === "block") {
+            document.getElementById("myForm3").style.display = "none";
+        } else {
+            document.getElementById("myForm9").style.display = "none";
+            document.getElementById("myForm10").style.display = "none";
+            document.getElementById("myForm11").style.display = "none";
+            document.getElementById("myForm6").style.display = "none";
+            document.getElementById("myForm7").style.display = "none";
+            document.getElementById("myForm8").style.display = "none";
+            document.getElementById("myForm5").style.display = "none";
+            document.getElementById("myForm4").style.display = "none";
+            document.getElementById("myForm3").style.display = "block";
+            document.getElementById("myForm2").style.display = "none"
+            document.getElementById("myForm").style.display = "none"
+        }
+    }
+
+    function openTeamForm() {
+        if (document.getElementById("myForm4").style.display === "block") {
+            document.getElementById("myForm4").style.display = "none";
+        } else {
+            document.getElementById("myForm9").style.display = "none";
+            document.getElementById("myForm10").style.display = "none";
+            document.getElementById("myForm11").style.display = "none";
+            document.getElementById("myForm6").style.display = "none";
+            document.getElementById("myForm7").style.display = "none";
+            document.getElementById("myForm8").style.display = "none";
+            document.getElementById("myForm5").style.display = "none";
+            document.getElementById("myForm4").style.display = "block";
+            document.getElementById("myForm3").style.display = "none";
+            document.getElementById("myForm2").style.display = "none"
+            document.getElementById("myForm").style.display = "none"
+        }
+    }
+
+    function officesForm() {
+        if (document.getElementById("myForm5").style.display === "block") {
+            document.getElementById("myForm5").style.display = "none";
+        } else {
+            document.getElementById("myForm9").style.display = "none";
+            document.getElementById("myForm10").style.display = "none";
+            document.getElementById("myForm11").style.display = "none";
+            document.getElementById("myForm6").style.display = "none";
+            document.getElementById("myForm7").style.display = "none";
+            document.getElementById("myForm8").style.display = "none";
+            document.getElementById("myForm5").style.display = "block";
+            document.getElementById("myForm4").style.display = "none";
+            document.getElementById("myForm3").style.display = "none";
+            document.getElementById("myForm2").style.display = "none"
+            document.getElementById("myForm").style.display = "none"
+        }
+    }
+
+    function teamsForm() {
+        if (document.getElementById("myForm6").style.display === "block") {
+            document.getElementById("myForm6").style.display = "none";
+        } else {
+            document.getElementById("myForm9").style.display = "none";
+            document.getElementById("myForm10").style.display = "none";
+            document.getElementById("myForm11").style.display = "none";
+            document.getElementById("myForm6").style.display = "block";
+            document.getElementById("myForm7").style.display = "none";
+            document.getElementById("myForm8").style.display = "none";
+            document.getElementById("myForm5").style.display = "none";
+            document.getElementById("myForm4").style.display = "none";
+            document.getElementById("myForm3").style.display = "none";
+            document.getElementById("myForm2").style.display = "none"
+            document.getElementById("myForm").style.display = "none"
+        }
+    }
+
+    function positionsForm() {
+        if (document.getElementById("myForm7").style.display === "block") {
+            document.getElementById("myForm7").style.display = "none";
+        } else {
+            document.getElementById("myForm9").style.display = "none";
+            document.getElementById("myForm10").style.display = "none";
+            document.getElementById("myForm11").style.display = "none";
+            document.getElementById("myForm8").style.display = "none";
+            document.getElementById("myForm7").style.display = "block";
+            document.getElementById("myForm6").style.display = "none";
+            document.getElementById("myForm5").style.display = "none";
+            document.getElementById("myForm4").style.display = "none";
+            document.getElementById("myForm3").style.display = "none";
+            document.getElementById("myForm2").style.display = "none"
+            document.getElementById("myForm").style.display = "none"
+        }
+    }
+
+    function employeesForm() {
+        if (document.getElementById("myForm8").style.display === "block") {
+            document.getElementById("myForm8").style.display = "none";
+        } else {
+            document.getElementById("myForm9").style.display = "none";
+            document.getElementById("myForm10").style.display = "none";
+            document.getElementById("myForm11").style.display = "none";
+            document.getElementById("myForm8").style.display = "block";
+            document.getElementById("myForm7").style.display = "none";
+            document.getElementById("myForm6").style.display = "none";
+            document.getElementById("myForm5").style.display = "none";
+            document.getElementById("myForm4").style.display = "none";
+            document.getElementById("myForm3").style.display = "none";
+            document.getElementById("myForm2").style.display = "none"
+            document.getElementById("myForm").style.display = "none"
+        }
+    }
+
+    function addEmpToPosForm() {
+        if (document.getElementById("myForm9").style.display === "block") {
+            document.getElementById("myForm9").style.display = "none";
+        } else {
+            document.getElementById("myForm9").style.display = "block";
+            document.getElementById("myForm10").style.display = "none";
+            document.getElementById("myForm11").style.display = "none";
+            document.getElementById("myForm8").style.display = "none";
+            document.getElementById("myForm7").style.display = "none";
+            document.getElementById("myForm6").style.display = "none";
+            document.getElementById("myForm5").style.display = "none";
+            document.getElementById("myForm4").style.display = "none";
+            document.getElementById("myForm3").style.display = "none";
+            document.getElementById("myForm2").style.display = "none"
+            document.getElementById("myForm").style.display = "none"
+        }
+    }
+
+    function addEmpToTeamsForm() {
+        if (document.getElementById("myForm10").style.display === "block") {
+            document.getElementById("myForm10").style.display = "none";
+        } else {
+            document.getElementById("myForm9").style.display = "none";
+            document.getElementById("myForm10").style.display = "block";
+            document.getElementById("myForm11").style.display = "none";
+            document.getElementById("myForm8").style.display = "none";
+            document.getElementById("myForm7").style.display = "none";
+            document.getElementById("myForm6").style.display = "none";
+            document.getElementById("myForm5").style.display = "none";
+            document.getElementById("myForm4").style.display = "none";
+            document.getElementById("myForm3").style.display = "none";
+            document.getElementById("myForm2").style.display = "none"
+            document.getElementById("myForm").style.display = "none"
+        }
+    }
+
+    function addEmpToOfficesForm() {
+        if (document.getElementById("myForm11").style.display === "block") {
+            document.getElementById("myForm11").style.display = "none";
+        } else {
+            document.getElementById("myForm9").style.display = "none";
+            document.getElementById("myForm10").style.display = "none";
+            document.getElementById("myForm11").style.display = "block";
+            document.getElementById("myForm8").style.display = "none";
+            document.getElementById("myForm7").style.display = "none";
+            document.getElementById("myForm6").style.display = "none";
+            document.getElementById("myForm5").style.display = "none";
+            document.getElementById("myForm4").style.display = "none";
+            document.getElementById("myForm3").style.display = "none";
+            document.getElementById("myForm2").style.display = "none"
+            document.getElementById("myForm").style.display = "none"
+        }
+    }
+
+
+
+</script>
+
+</body>
+{% endblock %}

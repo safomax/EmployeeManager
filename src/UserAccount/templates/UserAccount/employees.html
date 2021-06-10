@@ -1,0 +1,36 @@
+{% block content %}
+{% load static %}
+
+<body>
+<div class=col-6>
+    <div class="employees">
+        <div class="sidebar-left">
+            <div class=sidebar-left-header>
+                <h3 class="div-header-title">Data</h3>
+            </div>
+            <ul class="data-ul">
+                <button class="open-button" onclick="openEmployeeForm()">Add new employee</button>
+                <button class="open-button" onclick="openOfficeForm()">Add new office</button>
+                <button class="open-button" onclick="openPositionForm()">Add new position</button>
+                <button class="open-button" onclick="openTeamForm()">Add new team</button>
+
+                <div class="moreAttr">
+                    <button class="open-button" onclick="addEmpToPosForm()">Add Employees to Position(s)</button>
+                    <button class="open-button" onclick="addEmpToTeamsForm()">Add Employees to Team(s)</button>
+                    <button class="open-button" onclick="addEmpToOfficesForm()">Add Employees to Office(s)</button>
+                </div>
+
+
+
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+
+{% endblock %}

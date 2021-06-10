@@ -1,0 +1,32 @@
+{%  extends 'UserAccount/main.html' %}
+{% block content %}
+
+<body class="dashboard-bg">
+
+{% include 'UserAccount/navbar.html' %}
+
+<div class="row">
+
+    {% include 'UserAccount/sidebarleft.html' %}
+
+    {% include 'UserAccount/mid-pane.html' %}
+
+    {% include 'UserAccount/sidebarleftdown.html' %}
+
+    {% include 'UserAccount/sidebarright.html' %}
+
+    {% include 'UserAccount/modeldata.html' %}
+
+    {% include 'UserAccount/add-new-data.html' %}
+
+    {% include 'UserAccount/database-manip-pane.html' %}
+
+</div>
+
+{% include 'UserAccount/footer.html' %}
+
+
+
+</body>
+
+{% endblock %}

@@ -1,0 +1,60 @@
+{% block content %}
+{% load static %}
+
+<body>
+
+
+<div class=col-6>
+    <div class="mid-pane">
+
+        <div class=sidebar-mid-pane-header>
+            <h3 class="div-header-title">Employee Database</h3>
+        </div>
+
+        <div class="filter">
+            <h3>Filter Database</h3>
+            <select name="First" class="option-1">
+                <option value="volvo">Option1</option>
+            </select>
+            <select name="First" class="option-1">
+                <option value="volvo">Option2</option>
+            </select>
+            <select name="First" class="option-1">
+                <option value="volvo">Option3</option>
+            </select>
+            <select name="First" class="option-1">
+                <option value="volvo">Option4</option>
+            </select>
+
+            <input type="submit" value="Submit">
+        </div>
+
+        {% for i in messages %}
+        <tr>
+            <td>{{i.employee_id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.contact_number}}</td>
+            <td>{{i.subject}}</td>
+            <td>{{i.message}}</td>
+            <td>{{i.added_on}}</td>
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.contact_number}}</td>
+            <td>{{i.subject}}</td>
+            <td>{{i.message}}</td>
+            <td>{{i.added_on}}</td>
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.contact_number}}</td>
+            <td>{{i.subject}}</td>
+            <td>{{i.message}}</td>
+            <td>{{i.added_on}}</td>
+        </tr>
+        {% endfor %}
+
+    </div>
+</div>
+
+
+</body>
+{% endblock %}
