@@ -28,7 +28,7 @@ body {
     list-style-type: none;
     margin:0;
     padding:14px;
-    background-color: #333333;
+    background-color: #f2f2f2;
 
 }
 
@@ -47,7 +47,7 @@ body {
 .nav-li .nav-a {
     padding: 14px 20px;
     text-decoration:none;
-    color: white;
+    color: black;
 }
 
 .nav-a:hover {
@@ -69,7 +69,7 @@ body {
 .nav-li .nav-a {
     padding: 14px 20px;
     text-decoration:none;
-    color: white;
+    color: black;
 }
 
 
@@ -112,13 +112,13 @@ body {
 
 .top-sec{
     background:white;
-    position: relative;
+    padding: 30px;
 
 }
 img{
-    margin-top: -150px;
+
         width: 100%;
-        height: 300px;
+
         display: block; /* remove extra space below image */
     }
 
@@ -126,11 +126,10 @@ img{
 .header-title {
     font-size: 3em;
 
-    color: white;
+    color: black;
     text-decoration: none;
-    position: absolute;
     z-index: 999;
-    top: 200px;
+
     left: 30px;
 
 }
@@ -149,6 +148,23 @@ img{
     margin: 5px;
     background-color: white;
 }
+
+
+.mid-pane-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;
+}
+
 
 .filter {
     margin: 0px;
@@ -258,12 +274,13 @@ img{
 .sidebar-left-header,
 .sidebar-leftdown-header,
 .sidebar-mid-pane-header{
-    background-color: #404040;
-    padding: 1px 1px 1px 10px;
+    background-color: #f2f2f2;
+    padding: 1px 1px 1px 5px;
 }
 
 .div-header-title{
-    color: white;
+    display: inline-block;
+    color: black;
 }
 
 /***********landing-nav********************/
@@ -329,6 +346,7 @@ img{
     display: none;
     z-index: 999;
 
+    padding: 35px;
     top: 50%;
     left: 50%;
     margin-left: -200px;
@@ -349,7 +367,7 @@ img{
 }
 
 .form-popup-header{
-    background-color: #333333;
+    background-color: #f2f2f2;
     padding: 1px 1px 1px 10px;
 }
 
@@ -376,6 +394,9 @@ img{
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
+    right: 0;
+
+
 }
 
 .btn-cancel:hover{
@@ -398,9 +419,45 @@ img{
 }
 
 .moreAttr {
-    margin-top: 50px;
 }
 
 
+/***********Colored panes*************/
 
+#employee-profiles-pane{
+    background-color: red;
+    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 
+#admin-pane{
+    background-color: blue;
+    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+#groups-pane{
+    background-color: green;
+    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+#create-employee-account-pane{
+    background-color: purple;
+    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#employee-profiles-pane:hover,
+#create-employee-account-pane:hover,
+#groups-pane:hover,
+#admin-pane:hover{
+    opacity: 0.8;
+}
+
+.pane-title{
+    color: white;
+    text-align: center;
+}

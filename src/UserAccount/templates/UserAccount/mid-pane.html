@@ -29,31 +29,61 @@
             <input type="submit" value="Submit">
         </div>
 
-        {% for i in messages %}
-        <tr>
-            <td>{{i.employee_id}}</td>
-            <td>{{i.name}}</td>
-            <td>{{i.contact_number}}</td>
-            <td>{{i.subject}}</td>
-            <td>{{i.message}}</td>
-            <td>{{i.added_on}}</td>
-            <td>{{i.id}}</td>
-            <td>{{i.name}}</td>
-            <td>{{i.contact_number}}</td>
-            <td>{{i.subject}}</td>
-            <td>{{i.message}}</td>
-            <td>{{i.added_on}}</td>
-            <td>{{i.id}}</td>
-            <td>{{i.name}}</td>
-            <td>{{i.contact_number}}</td>
-            <td>{{i.subject}}</td>
-            <td>{{i.message}}</td>
-            <td>{{i.added_on}}</td>
-        </tr>
-        {% endfor %}
+        <div style="overflow-x:auto;">
+        <table class="mid-pane-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Gender</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Employment date</th>
+                    <th>Working hours from</th>
+                    <th>Working hours to</th>
+                    <th>Email</th>
+                    <th>Primary address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Postal code</th>
+                    <th>Primary phone</th>
+                    <th>Other phone</th>
+                    <th>Date of birth</th>
+                    <th>Salary</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for i in data %}
+            <tr>
+                <td>{{i.employee_id}}</td>
+                <td>{{i.gender}}</td>
+                <td>{{i.first_name}}</td>
+                <td>{{i.last_name}}</td>
+                <td>{{i.employment_date}}</td>
+                <td>{{i.working_hours_from}}</td>
+                <td>{{i.working_hours_to}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.primary_address}}</td>
+                <td>{{i.city}}</td>
+                <td>{{i.state}}</td>
+                <td>{{i.postalCode}}</td>
+                <td>{{i.primary_phone_number}}</td>
+                <td>{{i.other_phone_number}}</td>
+                <td>{{i.date_of_birth}}</td>
+                <td>{{i.salary}}</td>
+                <td>{{i.status}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+
+
+        </table>
 
     </div>
+    </div>
 </div>
+
+
 
 
 </body>

@@ -9,73 +9,117 @@
     <div class="form-popup" id="myForm">
         <div class=form-popup-header>
             <h3 class="div-header-title">New Employee</h3>
+            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
         </div>
-
         <form action="" method="POST" class="form-container">
             {% csrf_token %}
-            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
             <div class="form-input">
-                <label>Employee ID:</label>
-                <input type="text" class="form-control" name="name" placeholder="">
+                <label>
+                    Employee ID:
+                    <input type="text" class="form-control" name="employee_id" placeholder="">
+                </label>
             </div>
             <div>
-                <label>First name:</label>
-                <input type="text" class="form-control" name="name" placeholder="">
-                <label>Last name:</label>
-                <input type="text" class="form-control" name="name" placeholder="">
+                <label>
+                    First name:
+                    <input type="text" class="form-control" name="first_name" placeholder="">
+                </label>
+                <label>
+                    Last name:
+                    <input type="text" class="form-control" name="last_name" placeholder="">
+                </label>
             </div>
             <div>
-                <label>Gender:</label>
-                <input type="text" class="form-control" name="name" placeholder="">
+                <label>
+                    Gender:
+                    <select name="gender">
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                        <option value="None">Prefer not to say</option>
+                    </select>
+                </label>
             </div>
             <div>
-                <label>Employment date:</label>
-                <input type="date" class="form-control" name="name" placeholder="">
+                <label>
+                    Employment date:
+                    <input type="date" class="form-control" name="employment_date" placeholder="">
+                </label>
             </div>
             <div>
-                <label>Working hours:</label>
-                <input type="time" class="form-control" name="name" placeholder="">
-                <span>to</span>
-                <input type="time" class="form-control" name="name" placeholder="">
+                <span>
+                <label>
+                    Working hours:
+                    <input type="time" class="form-control" name="working_hours_from" placeholder="">
+                </label>
+                <label>
+                    to
+                    <input type="time" class="form-control" name="working_hours_to" placeholder="">
+                </label>
+                </span>
             </div>
             <div>
-                <label>Email address:</label>
-                <input type="email" class="form-control" name="name" placeholder="">
+                <label>
+                    Email address:
+                    <input type="email" class="form-control" name="email" placeholder="">
+                </label>
             </div>
             <div>
-                <label>Primary address:</label>
-                <input type="text" class="form-control" name="name" placeholder="">
+                <label>
+                    Primary address:
+                    <input type="text" class="form-control" name="primary_address" placeholder="">
+                </label>
             </div>
             <div>
                 <div>
-                    <label>City:</label>
-                    <input type="text" class="form-control" name="name" placeholder="">
-                    <label>State:</label>
-                    <input type="text" class="form-control" name="name" placeholder="">
-                    <label>Postal code:</label>
-                    <input type="text" class="form-control" name="name" placeholder="">
+                    <label>
+                        City:
+                        <input type="text" class="form-control" name="city" placeholder="">
+                    </label>
+                    <label>
+                        State:
+                        <input type="text" class="form-control" name="state" placeholder="">
+                    </label>
+                    <label>
+                        Postal code:
+                        <input type="text" class="form-control" name="postalCode" placeholder="">
+                    </label>
                 </div>
                 <div>
-                    <label>Primary phone number:</label>
-                    <input type="text" class="form-control" name="name" placeholder="">
-                    <label>Other phone number:</label>
-                    <input type="text" class="form-control" name="name" placeholder="">
+                    <label>
+                        Primary phone number:
+                        <input type="text" class="form-control" name="primary_phone_number" placeholder="">
+                    </label>
+                    <label>
+                        Other phone number:
+                        <input type="text" class="form-control" name="other_phone_number" placeholder="">
+                    </label>
                 </div>
                 <div>
-                    <label>Date of Birth:</label>
-                    <input type="text" class="form-control" name="name" placeholder="">
+                    <label>
+                        Date of Birth:
+                        <input type="date" class="form-control" name="date_of_birth" placeholder="">
+                    </label>
                 </div>
                 <div>
-                    <label>Salary:</label>
-                    <input type="number" class="form-control" name="name" placeholder="">
+                    <label>
+                        Salary:
+                        <input type="number" class="form-control" name="salary" placeholder="">
+                    </label>
                 </div>
                 <div>
-                    <label>Status:</label>
-                    <input type="text" class="form-control" name="name" placeholder="">
+                    <label>
+                        Gender:
+                        <select name="status">
+                            <option value="PT">Part Time</option>
+                            <option value="FT">Full Time</option>
+                            <option value="Temp">Temporary</option>
+                            <option value="S">Seasonal</option>
+                        </select>
+                    </label>
                 </div>
 
-               <!-- <button type="submit" value="Post" class="form-btn">Submit</button>-->
-                <input type="submit" value="Post" class="form-control"/>
+                <!-- <button type="submit" value="Post" class="form-btn">Submit</button>-->
+                <input class="form-btn" type="submit" value="Submit" class="form-control"/>
 
             </div>
         </form>
@@ -85,11 +129,11 @@
 
         <div class=form-popup-header>
             <h3 class="div-header-title">New office</h3>
+            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
         </div>
 
         <form action="" method="POST" class="form-container">
             {% csrf_token %}
-            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
             <div class="form-input">
                 <label>
                     Office Address:
@@ -112,7 +156,7 @@
                     <input type="text" class="form-control" name="postalCode">
                 </label>
             </div>
-                <input type="submit" value="Post" class="form-control"/>
+            <input class="form-btn" type="submit" value="Submit" class="form-control"/>
 
         </form>
     </div>
@@ -121,17 +165,18 @@
 
         <div class=form-popup-header>
             <h3 class="div-header-title">New position</h3>
-        </div>
-
-        <form action="" method="post" class="form-container">
-            {% csrf_token %}
             <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
+        </div>
+        <form action="" method="POST" class="form-container">
+            {% csrf_token %}
             <div class="form-input">
-                <label>Position:</label>
-                <input type="text" class="form-control" name="name" placeholder="">
+                <label>
+                    Position:
+                    <input type="text" class="form-control" name="position" placeholder="">
+                </label>
             </div>
 
-            <button type="submit" class="form-btn">Submit</button>
+            <input class="form-btn" type="submit" value="Submit" class="form-control"/>
 
         </form>
     </div>
@@ -140,84 +185,174 @@
 
         <div class=form-popup-header>
             <h3 class="div-header-title">New team</h3>
+            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
+
         </div>
 
-        <form action="" method="post" class="form-container">
+        <form action="" method="POST" class="form-container">
             {% csrf_token %}
-            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
             <div class="form-input">
-                <label>Team:</label>
-                <input type="text" class="form-control" name="name" placeholder="">
+                <label>
+                    Team:
+                    <input type="text" class="form-control" name="team" placeholder="">
+                </label>
             </div>
-            <button type="submit" class="form-btn">Submit</button>
+            <input class="form-btn" type="submit" value="Submit" class="form-control"/>
+
         </form>
     </div>
+
 
     <!--Offices,Employees,Positions,Teams-->
     <div class="form-popup" id="myForm5">
         <div class=form-popup-header>
-            <h3 class="div-header-title">Offices</h3>
+           <span class="div-header-title">Offices</span>
+            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
         </div>
         <form action="" method="post" class="form-container">
             {% csrf_token %}
-            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
-            <div class="form-input">
-                <label>Team:</label>
-                <input type="text" class="form-control" name="name" placeholder="">
+            <div style="overflow-x:auto;">
+        <table class="mid-pane-table">
+            <thead>
+                <tr>
+                    <th>Office address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Postal code</th>
+            </thead>
+            <tbody>
+            {% for i in data2 %}
+            <tr>
+                <td>{{i.office_address}}</td>
+                <td>{{i.city}}</td>
+                <td>{{i.state}}</td>
+                <td>{{i.postalCode}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
             </div>
         </form>
     </div>
 
     <div class="form-popup" id="myForm6">
         <div class=form-popup-header>
-            <h3 class="div-header-title">Teams</h3>
+            <span class="div-header-title">Teams</span>
+            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
         </div>
         <form action="" method="post" class="form-container">
             {% csrf_token %}
-            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
-            <div class="form-input">
-                <label>Team:</label>
-                <input type="text" class="form-control" name="name" placeholder="">
-            </div>
+            <table class="mid-pane-table">
+            <thead>
+                <tr>
+                    <th>Team</th>
+
+            </thead>
+            <tbody>
+            {% for i in data3 %}
+            <tr>
+                <td>{{i.team}}</td>
+
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
         </form>
     </div>
 
     <div class="form-popup" id="myForm7">
         <div class=form-popup-header>
-            <h3 class="div-header-title">Positions</h3>
+            <span class="div-header-title">Positions</span>
+            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
+
         </div>
         <form action="" method="post" class="form-container">
             {% csrf_token %}
-            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
-            <div class="form-input">
-                <label>Team:</label>
-                <input type="text" class="form-control" name="name" placeholder="">
-            </div>
+            <table class="mid-pane-table">
+            <thead>
+                <tr>
+                    <th>Position</th>
+
+            </thead>
+            <tbody>
+            {% for i in data4 %}
+            <tr>
+                <td>{{i.position}}</td>
+
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
         </form>
     </div>
 
     <div class="form-popup" id="myForm8">
         <div class=form-popup-header>
-            <h3 class="div-header-title">Employees</h3>
+            <span class="div-header-title">Employees</span>
+            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
         </div>
         <form action="" method="post" class="form-container">
             {% csrf_token %}
-            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
-            <div class="form-input">
-                <label>Team:</label>
-                <input type="text" class="form-control" name="name" placeholder="">
+            <div style="overflow-x:auto;">
+        <table class="mid-pane-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Gender</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Employment date</th>
+                    <th>Working hours from</th>
+                    <th>Working hours to</th>
+                    <th>Email</th>
+                    <th>Primary address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Postal code</th>
+                    <th>Primary phone</th>
+                    <th>Other phone</th>
+                    <th>Date of birth</th>
+                    <th>Salary</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for i in data %}
+            <tr>
+                <td>{{i.employee_id}}</td>
+                <td>{{i.gender}}</td>
+                <td>{{i.first_name}}</td>
+                <td>{{i.last_name}}</td>
+                <td>{{i.employment_date}}</td>
+                <td>{{i.working_hours_from}}</td>
+                <td>{{i.working_hours_to}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.primary_address}}</td>
+                <td>{{i.city}}</td>
+                <td>{{i.state}}</td>
+                <td>{{i.postalCode}}</td>
+                <td>{{i.primary_phone_number}}</td>
+                <td>{{i.other_phone_number}}</td>
+                <td>{{i.date_of_birth}}</td>
+                <td>{{i.salary}}</td>
+                <td>{{i.status}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
             </div>
         </form>
+        </div>
     </div>
 
     <!--Add employees to Offices,Positions,Teams forms-->
     <div class="form-popup" id="myForm9">
         <div class=form-popup-header>
             <h3 class="div-header-title">Add Employee to Position</h3>
+            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
         </div>
         <form action="" method="post" class="form-container">
             {% csrf_token %}
-            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
 
             <div class="form-input">
                 <label>Employee:</label>
@@ -234,11 +369,11 @@
     <div class="form-popup" id="myForm10">
         <div class=form-popup-header>
             <h3 class="div-header-title">Add Employee to Team</h3>
+            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
         </div>
         <form action="" method="post" class="form-container">
             {% csrf_token %}
-            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
-             <div class="form-input">
+            <div class="form-input">
                 <label>Employee:</label>
                 <select name="Employee" class="employee"></select>
 
@@ -253,17 +388,15 @@
     <div class="form-popup" id="myForm11">
         <div class=form-popup-header>
             <h3 class="div-header-title">Add Employee to Office</h3>
+            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
         </div>
         <form action="" method="post" class="form-container">
             {% csrf_token %}
-            <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
-             <div class="form-input">
+            <div class="form-input">
                 <label>Employee:</label>
                 <select name="Employee" id="employee"></select>
-
                 <label>Office:</label>
                 <select name="Office" id="office"></select>
-
                 <button type="submit" class="form-btn">Add to Office</button>
             </div>
         </form>
@@ -299,7 +432,6 @@
         document.getElementById("myForm9").style.display = "none";
         document.getElementById("myForm10").style.display = "none";
         document.getElementById("myForm11").style.display = "none";
-
 
 
     }
@@ -484,7 +616,6 @@
             document.getElementById("myForm").style.display = "none"
         }
     }
-
 
 
 </script>

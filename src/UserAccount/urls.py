@@ -1,4 +1,4 @@
-
+from django.conf.urls import url
 from django.urls import path
 from . import views
 
@@ -7,9 +7,11 @@ urlpatterns = [
     path('login/', views.loginPage, name="login"),
     path('logout/', views.logoutUser, name="logout"),
     path('dashboard/', views.dashboard, name="dashboard"),
+    path('dashboard/', views.createEmployeeAccount, name="dashboard"),
     path('', views.landing, name="landing"),
-    #path('databaseManip/', views.databaseManip, name="databaseManip"),
     path('landing/', views.landing, name="landing"),
+
+
 
 ]
 
