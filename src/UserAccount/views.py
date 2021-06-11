@@ -26,7 +26,6 @@ def registerPage(request):
 
 
 def createEmployeeAccount(request):
-    print("Got here.")
     if request.method == 'POST':
         username = request.POST['username']
         email = request.POST['email']
