@@ -14,17 +14,18 @@
             <h3>Your Employee Management System</h3>
         </div>
 
-    <div class="input">{{form.username}}</div>
-    <div class="input">{{form.email}}</div>
-    <div class="input">{{form.password1}}</div>
-    <div class="input">{{form.password2}}</div>
-    <input class="" type="submit" value="Register">
+    <div class="auth-input">{{form.username}}</div>
+    <div class="auth-input">{{form.email}}</div>
+    <div class="auth-input">{{form.password1}}</div>
+    <div class="auth-input">{{form.password2}}</div>
+    <input class="auth-submit" type="submit" value="Register">
+
 
 </form>
 
 {{form.errors}}
 
-Already have an account? <a href="{% url 'login' %}" class="">Log In</a>
+Already have an account? <a href="{% url 'login' %}" class="auth-bottom">Log In</a>
 </div>
 </body>
 

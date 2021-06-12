@@ -4,49 +4,22 @@
 
 <body>
 
-
 <div class=col-3>
     <div class="sidebar-right" id="create-employee-account-pane">
         <h1 class="pane-title" onclick="openEmpAccountForm()">Create employee account</h1>
     </div>
 
     <div class="form-popup" id="create-emp-account-form">
+        <div class="form-container">
         <div class=form-popup-header>
             <h3 class="div-header-title">Create employee account</h3>
             <button type="button" class="btn-cancel" onclick="closeEmpAccountForm()">Close</button>
         </div>
 
-        <form  method="POST" class="form-container">
-            {% csrf_token %}
-
-            <h3>A drop down will go here that will allow you to select the employee ID
-            that will be associated with this account.</h3>
-
-            <div>
-                <label>
-                    <input class="form-control" type="text" name="username" placeholder="Username">
-                </label>
-            </div>
-            <div>
-                <label>
-                    <input class="form-control" type="text" name="email" placeholder="Email">
-                </label>
-            </div>
-            <div>
-                <label>
-                    <input class="form-control" type="text" name="password" placeholder="Password">
-                </label>
-            </div>
-            <div>
-                <label>
-                    <input class="form-control" type="text" name="password2" placeholder="Confirm password">
-                </label>
-            </div>
-            <div>
-                <input class="form-btn" type="submit" value="Create Account"/>
-            </div>
-        </form>
+        <a class="create-emp-btn" href="{% url 'landing' %}">Create new employee here</a>
+</div>
     </div>
+
 </div>
 
 

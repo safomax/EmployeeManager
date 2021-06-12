@@ -8,15 +8,37 @@
     <ul class="landing-nav-ul">
 
 
-        <li class="landing-nav-li"><a class="landing-nav-a" href="#a">My Employee Manager</a></li>
-        <li class="landing-nav-li"><a class="landing-nav-a" href="#b">Features</a></li>
-
-        <li class="landing-nav-li"><a class="landing-nav-a" href="#a">Contact</a></li>
-        <li class="landing-nav-li"><a class="landing-nav-a" href="{% url 'login' %}">Sign In</a></li>
+        <li class="landing-nav-li"><a class="landing-nav-a" href="{% url 'dashboard' %}">Dashboard</a></li>
 
     </ul>
 </div>
 
+<div class="container">
+    <form method="POST" action="">
+        {% csrf_token %}
+
+        <div>
+            <h1>Employee Manager</h1>
+            <h3>Add employee to management system </h3>
+        </div>
+
+
+        Employee ID associated with this new employee account:
+        <input class="auth-input" type="text" name="id_of_new_emp" placeholder="Employee ID">
+
+
+
+        <div class="auth-input">{{form.username}}</div>
+        <div class="auth-input">{{form.email}}</div>
+        <div class="auth-input">{{form.password1}}</div>
+        <div class="auth-input">{{form.password2}}</div>
+        <input class="auth-submit" type="submit" value="Register employee">
+
+
+    </form>
+
+    {{form.errors}}
+</div>
 
 </body>
 

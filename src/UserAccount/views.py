@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .forms import CreateUserForm
-from .models import Employee, Office, Position, Team
+from .models import Employee, Office, Position, Team, User_Has_EmployeeID
 from django.contrib.auth.models import User
 
 
@@ -23,29 +23,6 @@ def registerPage(request):
 
         context = {'form': form}
         return render(request, 'UserAccount/register.html', context)
-
-
-def createEmployeeAccount(request):
-    if request.method == 'POST':
-        username = request.POST['username']
-        email = request.POST['email']
-        password = request.POST['password']
-        password2 = request.POST['password2']
-
-        if password == password2:
-            if User.objects.filter(username=username).exists():
-                return redirect('dashboard')
-            else:
-                if User.objects.filter(email=email).exists():
-                    return redirect('dashboard')
-                else:
-                    user = User.objects.create_user(username=username, password=password, email=email)
-                    user.save()
-                    return redirect('dashboard')
-        else:
-            return redirect('dashboard')
-    else:
-        return render(request, 'UserAccount/dashboard.html')
 
 
 def loginPage(request):
@@ -74,9 +51,32 @@ def logoutUser(request):
     return redirect('login')
 
 
+@login_required(login_url='login')
 def landing(request):
-    context = {}
+    form = CreateUserForm()
+    if request.method == 'POST':
+        form = CreateUserForm(request.POST)
+        if form.is_valid():
+            well = form.save()
+
+            employee_id_of_new_emp = request.POST.get('id_of_new_emp')
+            foreignKeyLink = User_Has_EmployeeID(employee_id=Employee.objects.get(employee_id=employee_id_of_new_emp),
+                                                 new_employee=User.objects.get(username=well))
+            foreignKeyLink.save()
+
+            user = form.cleaned_data.get('username')
+
+
+            messages.success(request, 'Account was created for ' + user)
+            return redirect('landing')
+
+    context = {'form': form}
     return render(request, 'UserAccount/landing.html', context)
+
+
+def about(request):
+    context = {}
+    return render(request, 'UserAccount/about.html', context)
 
 
 @login_required(login_url='login')
@@ -89,13 +89,12 @@ def dashboard(request):
     if request.method == 'POST':
         if request.POST.get('employee_id') and request.POST.get('gender') and request.POST.get(
                 'first_name') and request.POST.get('last_name') and request.POST.get(
-                'employment_date') and request.POST.get('working_hours_from') and request.POST.get(
-                'working_hours_to') and request.POST.get('email') and request.POST.get(
-                'primary_address') and request.POST.get('city') and request.POST.get('state') and request.POST.get(
-                'postalCode') and request.POST.get('primary_phone_number') and request.POST.get(
-                'other_phone_number') and request.POST.get('date_of_birth') and request.POST.get(
-                'salary') and request.POST.get('status'):
-
+            'employment_date') and request.POST.get('working_hours_from') and request.POST.get(
+            'working_hours_to') and request.POST.get('email') and request.POST.get(
+            'primary_address') and request.POST.get('city') and request.POST.get('state') and request.POST.get(
+            'postalCode') and request.POST.get('primary_phone_number') and request.POST.get(
+            'other_phone_number') and request.POST.get('date_of_birth') and request.POST.get(
+            'salary') and request.POST.get('status'):
             print("POST employee")
             employee = Employee()
             employee.employee_id = request.POST.get('employee_id')
