@@ -5,6 +5,7 @@ html {
 body {
     margin: 0;
     background: #e6e6e6;
+    font-family: sans-serif;
 }
 
 .inputFields {
@@ -27,11 +28,8 @@ body {
     text-align: center;
     list-style-type: none;
     margin: 0;
-    padding: 14px;
-    background-color: white;
-    border-style: solid;
-    border-color:#f2f2f2;
-    border-width:2px;
+    padding: 8px;
+    background-color: rgba(33, 33, 33, 0.98);
 
 }
 
@@ -50,7 +48,8 @@ body {
 .nav-li .nav-a {
     padding: 14px 20px;
     text-decoration: none;
-    color: black;
+    color: white;
+    font-size: 24px;
 }
 
 .nav-a:hover {
@@ -70,9 +69,14 @@ body {
 
 
 .nav-li .nav-a {
-    padding: 14px 20px;
+    padding: 7px 20px;
     text-decoration: none;
-    color: black;
+    color: white;
+}
+
+.hello-words{
+    font-size: 2em;
+    color: white;
 }
 
 
@@ -122,12 +126,12 @@ img {
 
 
 .header-title {
-    font-size: 3em;
+    font-size: 2em;
 
     color: black;
     text-decoration: none;
     z-index: 999;
-
+    font-family: Garamond;
     left: 30px;
 
 }
@@ -177,9 +181,10 @@ tr:nth-child(even) {
 
 .bottom-sec {
 
-    background-color: #404040;
+   background-color: rgba(33, 33, 33, 0.98);;
     padding: 15px;
-    bottom: 0;
+
+
 
 }
 
@@ -309,6 +314,7 @@ tr:nth-child(even) {
 .sidebar-mid-pane-header {
     background-color: #f2f2f2;
     padding: 1px 1px 1px 5px;
+
 }
 
 .stats-header {
@@ -324,8 +330,8 @@ tr:nth-child(even) {
 .landing-nav-ul {
     list-style-type: none;
     margin: 0;
-    padding: 14px;
-    background-color: white;
+
+    background-color: rgba(33, 33, 33, 0.98);
 
 }
 
@@ -343,7 +349,8 @@ tr:nth-child(even) {
 .landing-nav-li .landing-nav-a {
     padding: 14px 20px;
     text-decoration: none;
-    color: black;
+    font-size: 2em;
+    color: white;
 }
 
 .landing-nav-a:hover {
@@ -434,6 +441,10 @@ tr:nth-child(even) {
     margin-top: -200px;
     width: 400px;
     height: 200px;
+
+    resize: both;
+  overflow: auto;
+    cursor: move;
 }
 
 .form-input {
@@ -505,29 +516,32 @@ tr:nth-child(even) {
 /***********Colored panes*************/
 
 #employee-profiles-pane {
-    background-color: red;
+    background-color: #ff6666;
     height: 200px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
 }
 
 #admin-pane {
-    background-color: blue;
+    background-color: #80bfff;
     height: 200px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
+    position: relative;
 }
 
 #groups-pane {
-    background-color: green;
+    background-color: #99ffbb;
     height: 200px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
 
 }
 
 #create-employee-account-pane {
-    background-color: purple;
+    background-color: #ffb3ff;
     height: 200px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
 }
 
 .create-emp-btn {
@@ -548,7 +562,94 @@ tr:nth-child(even) {
     opacity: 0.8;
 }
 
+.employee-profiles-pane-title{
+    text-decoration: none;
+    color: white;
+    font-size: 2em;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/******************/
 .pane-title {
     color: white;
     text-align: center;
+    font-family: sans-serif;
+}
+
+.pane-button-title {
+    color: white;
+    border: none;
+    font-size: 2em;
+    background: none;
+    text-align: center;
+}
+
+
+
+
+tr:hover{
+    background-color: #e6f9ff
+
+}
+
+
+
+/**********employee-profile-popup*****/
+
+#profile-form-popup{
+
+    justify-content: center;
+    position: fixed;
+    display: none;
+    z-index: 999;
+    padding: 40px;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    margin-left: -200px;
+    margin-top: -200px;
+    width: 400px;
+    height: 200px;
+}
+
+.group-container {
+
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+    overflow: scroll;
+    max-height: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+.group-container-top{
+}
+
+.profile-group-container {
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+    overflow: scroll;
+    max-height: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.box-container {
+    background-color: white;
+}
+
+.profiles-page-button{
+    border: none;
+    background: none;
+    font-size: 22px;
+    margin: 5px;
+}
+
+.profiles-page-button:hover{
+opacity: 0.5;
 }

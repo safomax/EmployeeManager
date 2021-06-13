@@ -10,10 +10,10 @@ class CreateUserForm(UserCreationForm):
 
     def __init__(self, *args, **kwargs):
         super(CreateUserForm, self).__init__(*args, **kwargs)
-        self.fields['username'].widget.attrs.update({'class': 'inputFields'})
-        self.fields['email'].widget.attrs.update({'class': 'inputFields'})
-        self.fields['password1'].widget.attrs.update({'class': 'inputFields'})
-        self.fields['password2'].widget.attrs.update({'class': 'inputFields'})
+        self.fields['username'].widget.attrs.update({'class': 'auth-input'})
+        self.fields['email'].widget.attrs.update({'class': 'auth-input'})
+        self.fields['password1'].widget.attrs.update({'class': 'auth-input'})
+        self.fields['password2'].widget.attrs.update({'class': 'auth-input'})
 
         self.fields['username'].widget.attrs['placeholder'] = 'Username'
         self.fields['email'].widget.attrs['placeholder'] = 'Email'

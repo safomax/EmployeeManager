@@ -4,12 +4,11 @@
 
 <body>
 
-<div class="landing-nav">
-    <ul class="landing-nav-ul">
 
-
-        <li class="landing-nav-li"><a class="landing-nav-a" href="{% url 'dashboard' %}">Dashboard</a></li>
-
+<div class="nav">
+    <ul class="nav-ul">
+        <li class="nav-li"><a class="nav-a" href="{% url 'dashboard' %}">Dashboard</a></li>
+        <li class="nav-li"><a class="nav-a" href="{% url 'logout' %}">Logout</a></li>
     </ul>
 </div>
 
@@ -28,10 +27,10 @@
 
 
 
-        <div class="auth-input">{{form.username}}</div>
-        <div class="auth-input">{{form.email}}</div>
-        <div class="auth-input">{{form.password1}}</div>
-        <div class="auth-input">{{form.password2}}</div>
+        <div>{{form.username}}</div>
+        <div>{{form.email}}</div>
+        <div>{{form.password1}}</div>
+        <div>{{form.password2}}</div>
         <input class="auth-submit" type="submit" value="Register employee">
 
 

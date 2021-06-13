@@ -1,0 +1,36 @@
+{%  extends 'UserAccount/main.html' %}
+{% block content %}
+{% load static %}
+
+<body>
+
+{% include 'UserAccount/navbar.html' %}
+
+<div class=col-10 style="float:none;margin:auto;">
+    <div class="group-container-top">
+
+        {% for i in data3 %}
+        <div class="group-container box-container">
+            <div class="" onclick="myFunction()">
+                <h2>{{i.team}}</h2>
+            </div>
+            <hr>
+            <button class="profiles-page-button">Details</button>
+            <button class="profiles-page-button">Members</button>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+</div>
+</div>
+
+<script>
+
+
+</script>
+
+
+</body>
+{% endblock %}

@@ -108,7 +108,7 @@
                 </div>
                 <div>
                     <label>
-                        Gender:
+                        Salary:
                         <select name="status">
                             <option value="PT">Part Time</option>
                             <option value="FT">Full Time</option>
@@ -356,11 +356,9 @@
 
             <div class="form-input">
                 <label>Employee:</label>
-                <select name="Employee" class="employee"></select>
-
+                <input type="text" class="form-control" name="employee_to_position" placeholder="ex. V00922923">
                 <label>Position:</label>
-                <select name="Position" id="position"></select>
-
+                <input type="text" class="form-control" name="employee_position" placeholder="ex. Software Developer">
                 <button type="submit" class="form-btn">Add to Position</button>
             </div>
         </form>
@@ -375,10 +373,10 @@
             {% csrf_token %}
             <div class="form-input">
                 <label>Employee:</label>
-                <select name="Employee" class="employee"></select>
+                <input type="text" class="form-control" name="add_emp_team" placeholder="ex. V00922923">
 
                 <label>Team:</label>
-                <select name="Team" id="team"></select>
+                <input type="text" class="form-control" name="the_team" placeholder="ex. Software Team">
 
                 <button type="submit" class="form-btn">Add to Team</button>
             </div>
@@ -394,9 +392,11 @@
             {% csrf_token %}
             <div class="form-input">
                 <label>Employee:</label>
-                <select name="Employee" id="employee"></select>
+                <input type="text" class="form-control" name="add_emp_office" placeholder="ex. V00922923">
+
                 <label>Office:</label>
-                <select name="Office" id="office"></select>
+                <input type="text" class="form-control" name="the_office" placeholder="ex. 5574 Oak Rd">
+
                 <button type="submit" class="form-btn">Add to Office</button>
             </div>
         </form>
@@ -432,7 +432,7 @@
         document.getElementById("myForm9").style.display = "none";
         document.getElementById("myForm10").style.display = "none";
         document.getElementById("myForm11").style.display = "none";
-
+        document.getElementById("profile-form-popup").style.display = "none";
 
     }
 

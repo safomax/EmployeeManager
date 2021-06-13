@@ -1,0 +1,55 @@
+{%  extends 'UserAccount/main.html' %}
+{% block content %}
+{% load static %}
+
+<body>
+
+{% include 'UserAccount/navbar.html' %}
+
+{{data.0.first_name}}
+{{data.1.first_name}}
+<div class="">
+    {% for i in data %}
+    <div class="col-3">
+        <div class="profile-group-container box-container">
+                <h2>{{i.first_name}} {{i.last_name}}</h2>
+            <hr>
+            <button class="profiles-page-button" onclick="openProfile()">Profile</button>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+
+
+<div id="profile-form-popup">
+
+    <div id="form-container">
+        <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
+
+        {% for i in data %}
+        <td>{{i.employee_id}}</td>
+        <td>{{i.first_name}} {{i.last_name}}</td>
+        {% endfor %}
+
+    </div>
+
+</div>
+
+<script>
+
+    function openProfile() {
+        document.getElementById("profile-form-popup").style.display = "block";
+    }
+
+
+    function closeForm() {
+        document.getElementById("profile-form-popup").style.display = "none";
+
+    }
+
+</script>
+
+
+</body>
+{% endblock %}

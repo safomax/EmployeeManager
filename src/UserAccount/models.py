@@ -4,9 +4,7 @@ from django.db import models
 from django.conf import settings
 
 
-
 # Create your models here.
-
 
 class Employee(models.Model):
     employee_id = models.CharField(max_length=40, primary_key=True)
@@ -15,8 +13,8 @@ class Employee(models.Model):
     first_name = models.CharField(max_length=24)
     last_name = models.CharField(max_length=24)
     employment_date = models.DateField()
-    working_hours_from = models.TimeField(default=(datetime.now))
-    working_hours_to = models.TimeField(default=(datetime.now))
+    working_hours_from = models.TimeField(default=datetime.now)
+    working_hours_to = models.TimeField(default=datetime.now)
     email = models.EmailField(max_length=255, unique=True, blank=True)
     primary_address = models.CharField(max_length=40)
     city = models.CharField(max_length=40)
@@ -29,25 +27,41 @@ class Employee(models.Model):
     STATUS_CHOICES = (('FT', 'Full_Time'), ('PT', 'Part_Time'), ('Temp', 'Temporary'), ('S', 'Seasonal'),)
     status = models.CharField(max_length=29, choices=STATUS_CHOICES)
 
-    class Meta:
-        db_table = 'employee'
 
 
 class Office(models.Model):
-    office_address = models.CharField(max_length=40)
+    office_address = models.CharField(max_length=255, primary_key=True)
     city = models.CharField(max_length=40)
     state = models.CharField(max_length=40)
     postalCode = models.CharField(max_length=40)
 
 
 class Position(models.Model):
-    position = models.CharField(max_length=255)
+    position = models.CharField(max_length=255, primary_key=True)
 
 
 class Team(models.Model):
-    team = models.CharField(max_length=255)
+    team = models.CharField(max_length=255, primary_key=True)
 
 
+###################Relationship-Tables######################
 class User_Has_EmployeeID(models.Model):
     new_employee = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     employee_id = models.ForeignKey(Employee, on_delete=models.CASCADE)
+
+
+class Employee_Is_Position(models.Model):
+    employee_id = models.ForeignKey(Employee, on_delete=models.CASCADE)
+    job = models.ForeignKey(Position, on_delete=models.CASCADE)
+
+
+class Team_Has_Employee(models.Model):
+    team = models.ForeignKey(Team, on_delete=models.CASCADE)
+    employee_id = models.ForeignKey(Employee, on_delete=models.CASCADE)
+
+
+class Employee_Working_Location(models.Model):
+    employee_id = models.ForeignKey(Employee, on_delete=models.CASCADE)
+    location = models.ForeignKey(Office, on_delete=models.CASCADE)
+
+

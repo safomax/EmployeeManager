@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'EmployeeManager.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'MyPlannerDB',
+        'NAME': 'EmployeeManagerDB',
         'USER': 'root',
         'PASSWORD': 'pokuaah',
         'HOST': '127.0.0.1',
