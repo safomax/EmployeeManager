@@ -1,4 +1,5 @@
 # EmployeeManager
 Application for  managers to interact with employees.
 
-![image](https://user-images.githubusercontent.com/52089721/121488410-0eca7900-c9a1-11eb-9f8a-f3a2a2d0c08c.png)
+<img width="1440" alt="Screen Shot 2021-06-13 at 1 26 17 AM" src="https://user-images.githubusercontent.com/52089721/121796357-673e8800-cbe6-11eb-8b7a-b1ec3cf5bfef.png">
+
